@@ -1,0 +1,41 @@
+.headerBurger {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 1000;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.line {
+    background-color: steelblue;
+    height: 4px;
+    width: 30px;
+    margin: 2px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-burger {
+    display: none;
+}
+
+.nav-burger.open {
+    display: block;
+    backdrop-filter: blur(10px);
+}
+
+.nav-list-burger {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item-burger {
+    padding: 1rem;
+}
