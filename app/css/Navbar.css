@@ -1,33 +1,42 @@
-
-/* Navbar.css */
-
 .header {
     position: sticky;
     top: 0;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.4rem 2rem;
+}
+
+.nav-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.4rem 2rem; 
+    width: 100%;
 }
 
 .nav {
-    font-weight: 600; 
-    font-size: 1.125rem; 
+    font-weight: 600;
+    font-size: 1.125rem;
 }
 
 .nav-list {
     display: flex;
     align-items: center;
-    gap: 1rem; 
+    gap: 1rem;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
+.navFlag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    right: 2rem;
+}
+
 .nav-item {
-    padding: 1rem; 
+    padding: 1rem;
     border-bottom: 2px solid transparent;
     transition: all 0.2s;
     cursor: pointer;
@@ -35,10 +44,14 @@
 
 .nav-item:hover {
     padding-top: 1px;
-    /* border-color: #10b981;  */
-    color: #10b981; 
+    color: #10b981;
 }
 
 .nav-item.active {
     border-color: #10b981;
+}
+
+.frenchFlag {
+    width: 27px;
+    height: 27px;
 }
