@@ -2,15 +2,25 @@
 
 import { useEffect, useState } from "react"; // Importer useEffect et useState
 import "../css/CardIdentity.css";
-import Image from 'next/image';
 import { chakra_petch } from "../fonts/fonts";
+import { useCurrentLocale } from "@/locales/client";
 
 interface Props {
     className?: string;
 }
 
 export default function CardIdentity({ className }: Props) {
-    const fullText = "Dééveloppeur Full Stack";
+    const locale = useCurrentLocale();
+    let fullText = "";
+    console.log('currentlocal jc', locale);
+
+    if (locale == 'fr') {
+        fullText = "Dééveloppeur Full Stack";
+    } else {
+        fullText = "Fuull Stack Developer";
+    };
+
+    //const fullText = "Dééveloppeur Full Stack";
     const [displayedText, setDisplayedText] = useState(""); 
 
 
@@ -32,6 +42,7 @@ export default function CardIdentity({ className }: Props) {
     return (
         <div>
             <div className={`cardIdentityWrapper ${className}`}>
+                {/* pour rappel futur, chakra_petch est le nom de ma google font */}
                 <p className={`familyName ${chakra_petch.className}`}>Jean-Christophe</p>
                 <p className={`familyName2 ${chakra_petch.className}`}>Fontaine</p>
                 <p className={`myName ${chakra_petch.className}`}>

@@ -10,10 +10,12 @@ import AboutMe from "./components/AboutMe";
 import "./css/MainPage.css";
 
 export default function Home() {
-
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
+        // Définir l'état initial pour `isMobile` avec la taille de l'écran une fois le composant monté
+        setIsMobile(window.innerWidth < 768);
+
         const handleResize = () => {
             setIsMobile(window.innerWidth < 768);
         };
