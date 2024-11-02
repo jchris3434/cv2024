@@ -1,0 +1,50 @@
+.about-me {
+    display: flex;
+    width: 100%; 
+    height: 92vh;
+    margin: 0 auto;
+    line-height: 1.6;
+    background-image: url("/AboutCorner.png"); 
+    background-size: cover; 
+    background-position: center;
+}
+
+.about-me p {
+    margin-bottom: 1rem;
+}
+
+.avatarWrapper {
+    display: flex;
+    width: 55%; 
+    margin: 0 auto; 
+    align-items: center; 
+}
+
+
+.avatarWrapper > div:first-child {
+    flex-basis: 40%;
+}
+
+.avatarWrapper > div:last-child {
+    flex-basis: 60%; 
+}
+
+.avatar-circle {
+   width: 18rem;
+}
+
+.About-Title {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.my-name-wrapper {
+    display: flex;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.my-name-color {
+    color: #5ce1e6;
+
+}

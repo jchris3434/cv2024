@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react"; // Importer useEffect et useState
 import "../css/CardIdentity.css";
-import { chakra_petch } from "../fonts/fonts";
+// import { chakra_petch } from "../fonts/fonts";
+import { audiowide } from "../fonts/fonts";
 import { useCurrentLocale } from "@/locales/client";
 
 interface Props {
@@ -43,9 +44,9 @@ export default function CardIdentity({ className }: Props) {
         <div>
             <div className={`cardIdentityWrapper ${className}`}>
                 {/* pour rappel futur, chakra_petch est le nom de ma google font */}
-                <p className={`familyName ${chakra_petch.className}`}>Jean-Christophe</p>
-                <p className={`familyName2 ${chakra_petch.className}`}>Fontaine</p>
-                <p className={`myName ${chakra_petch.className}`}>
+                <p className={`familyName ${audiowide.className}`}>Jean-Christophe</p>
+                <p className={`familyName2 ${audiowide.className}`}>Fontaine</p>
+                <p className={`myName ${audiowide.className}`}>
                     {displayedText}
                 </p>
             </div>

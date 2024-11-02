@@ -13,7 +13,6 @@ export default function Home() {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        // Définir l'état initial pour `isMobile` avec la taille de l'écran une fois le composant monté
         setIsMobile(window.innerWidth < 768);
 
         const handleResize = () => {
