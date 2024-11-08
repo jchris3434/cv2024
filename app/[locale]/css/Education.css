@@ -1,0 +1,95 @@
+.education-container {
+    display: block;
+    width: 100%; 
+    height: 100vh;
+    margin: 0 auto;
+    line-height: 1.6;
+    background-image: url("/school.png"); 
+    background-size: cover; 
+    background-position: center;
+}
+
+.toto {
+    width: 90%;
+}
+
+.logo-school-container {
+    padding-top: 3rem;
+    padding-left: 3rem;
+    width: 17%;
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.cda, .cursus-title {
+    padding-left: 25rem;
+    text-align: left;
+}
+
+.cursus-title {
+    font-size: 2rem;
+    padding-bottom: 3rem;
+    font-weight: 600;
+}
+
+.dwwm {
+    padding-top: 4rem;
+    padding-right: 25rem;
+    text-align: right;    
+}
+
+.cda-title {
+    display: flex;
+    font-size: 2rem;
+}
+
+.dwwm-title {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    justify-content: flex-end;
+}
+
+.cda-title p {
+    margin: 0;
+}
+
+.rncp {
+    font-size: 1.5rem;
+}
+
+.cda-entity, .dwwm-entity {
+    font-weight: 600;
+    color: #5ce1e6;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.dwwm-entity {
+    padding-right: 0;
+}
+
+@media (max-width: 1024px) {
+    
+    .logo-school-container {
+        display: flex;           
+        justify-content: center;  
+        align-items: center;      
+        padding-top: 1rem;
+    }
+    
+
+    .cda, .cursus-title {
+        padding-left: 0rem;
+        text-align: unset;
+    }
+
+    .dwwm {
+        padding-top: 4rem;
+        padding-right: 0rem;
+        text-align: unset;    
+    }
+}

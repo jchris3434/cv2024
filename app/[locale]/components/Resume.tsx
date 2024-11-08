@@ -1,6 +1,10 @@
 import React from 'react'
 
-function Cv() {
+interface ResumeProps {
+  isMobile: boolean;
+}
+
+function Resume({ isMobile }: ResumeProps): JSX.Element {
   return (
     <section>
         <h3>Expériences professionnelles</h3>
@@ -25,4 +29,4 @@ function Cv() {
   )
 }
 
-export default Cv
+export default Resume

@@ -1,7 +1,7 @@
 .about-me {
     display: flex;
     width: 100%; 
-    height: 92vh;
+    height: 100vh;
     margin: 0 auto;
     line-height: 1.6;
     background-image: url("/AboutCorner.png"); 
@@ -47,4 +47,38 @@
 .my-name-color {
     color: #5ce1e6;
 
+}
+
+@media (max-width: 1024px) { 
+    .about-me {
+        width: 100%; 
+        height: 100vh;
+        margin: 0 auto;
+        line-height: 1.2;
+        background-image: url("/AboutCorner.png"); 
+        background-size: cover; 
+        background-position: center;
+    }
+
+    .avatarWrapper {
+        width: 100vw;
+    }
+
+    .About-Title {
+        font-size: 2.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .my-name-wrapper {
+        font-size: 2rem;
+    }
+
+    .avatarWrapper > div:last-child {
+        flex-basis: 100%; 
+        margin: 1rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
 }

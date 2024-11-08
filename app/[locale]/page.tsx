@@ -8,15 +8,18 @@ import Navbar from "./components/Navbar";
 import BurgerMenu from "./components/burgerMenu";
 import AboutMe from "./components/AboutMe";
 import "./css/MainPage.css";
+import Education from './components/Education';
+import Resume from './components/Resume';
+// import Contact from './components/Contact';
 
 export default function Home() {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        setIsMobile(window.innerWidth < 768);
+        setIsMobile(window.innerWidth < 1024);
 
         const handleResize = () => {
-            setIsMobile(window.innerWidth < 768);
+            setIsMobile(window.innerWidth < 1024);
         };
 
         window.addEventListener('resize', handleResize);
@@ -30,7 +33,19 @@ export default function Home() {
                 <PhotoCard2 />
                 <CardIdentity className="" />
             </div>
-            <AboutMe />
+            
+            <section id="about-me">
+                <AboutMe isMobile={isMobile}/>
+            </section>
+            <section id="education">
+                <Education isMobile={isMobile}/>
+            </section>
+            {/* <section id="resume">
+                <Resume isMobile={isMobile}/>
+            </section> */}
+            {/* <section id="contact">
+                <Contact isMobile={isMobile}/>
+            </section> */}
         </section>
     );
 }

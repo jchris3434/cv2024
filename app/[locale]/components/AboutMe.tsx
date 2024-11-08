@@ -5,11 +5,15 @@ import { useI18n } from "@/locales/client";
 import { hind } from "../fonts/fonts";
 import { roboto_condensed } from "../fonts/fonts";
 
-function AboutMe(): JSX.Element {
+interface AboutMeProps {
+  isMobile: boolean;
+}
+
+function AboutMe({ isMobile }: AboutMeProps): JSX.Element {
   return (
     <section id="about-me" className={`about-me ${hind.className}`}>
       <div className='avatarWrapper'>
-        <div className='avatar-circle'>
+        {!isMobile && (<div className='avatar-circle'>
           <Image
             className="avatar-circle"
             src="/avatar-circle.png"
@@ -17,8 +21,8 @@ function AboutMe(): JSX.Element {
             height={500}
             alt="Picture of the author"
           />
-        </div>
-        <div>
+        </div>)}
+        <div className='all-text-wrapper'>
           <div>
             <h1 className={`About-Title ${roboto_condensed.className}`}>QUI SUIS-JE?</h1>
             <div className='my-name-wrapper'>
@@ -27,7 +31,7 @@ function AboutMe(): JSX.Element {
 
 
             <p>
-              Après plus de 10 ans dans l'hôtellerie de luxe à l'étranger – avec des expériences en Angleterre, aux États-Unis, et en Suisse – où j'ai évolué dans des établissements haut de gamme exigeant rigueur, sérieux, et satisfaction client.
+              Après plus de 10 ans passé dans l'hôtellerie de luxe à l'étranger – avec des expériences en Angleterre, aux États-Unis, et en Suisse – où j'ai évolué dans des établissements haut de gamme exigeant rigueur, sérieux, et satisfaction client.
             </p>
 
             <p>

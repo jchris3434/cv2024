@@ -58,7 +58,7 @@
 
 @media (max-width: 768px) { 
     .photoCard-container {
-        min-height: 60vh;
+        min-height: 50vh;
     }
 
     .photoCard-content {

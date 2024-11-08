@@ -1,8 +1,5 @@
-"use client";
-
-import { useEffect, useState } from "react"; // Importer useEffect et useState
+import { useEffect, useState } from "react";
 import "../css/CardIdentity.css";
-// import { chakra_petch } from "../fonts/fonts";
 import { audiowide } from "../fonts/fonts";
 import { useCurrentLocale } from "@/locales/client";
 
@@ -12,43 +9,108 @@ interface Props {
 
 export default function CardIdentity({ className }: Props) {
     const locale = useCurrentLocale();
-    let fullText = "";
-    console.log('currentlocal jc', locale);
+    const fullText = locale === 'fr' ? "DDéveloppeur Full Stack" : "FFull Stack Developer";
+    const lastName = "Fontaine";
+    const firstName = "Jean-Christophe";
 
-    if (locale == 'fr') {
-        fullText = "Dééveloppeur Full Stack";
-    } else {
-        fullText = "Fuull Stack Developer";
-    };
+    const [displayedText, setDisplayedText] = useState("");
+    const [letterVisibilityLastName, setLetterVisibilityLastName] = useState(Array(lastName.length).fill(0));
+    const [letterVisibilityFirstName, setLetterVisibilityFirstName] = useState(Array(firstName.length).fill(0));
+    const [isFilled, setIsFilled] = useState(false);
 
-    //const fullText = "Dééveloppeur Full Stack";
-    const [displayedText, setDisplayedText] = useState(""); 
-
-
+    // Effet d'écriture pour fullText
     useEffect(() => {
-        let index = 0; 
+        let index = 0;
         const typingInterval = setInterval(() => {
             if (index < fullText.length) {
-                setDisplayedText((prev) => prev + fullText.charAt(index)); // j'utilise charAt pour éviter le undefined à la fin
+                setDisplayedText((prev) => prev + fullText.charAt(index));
                 index++;
             } else {
-                clearInterval(typingInterval); // Arrête l'intervalle une fois le texte complet affiché
+                clearInterval(typingInterval);
             }
-        }, 250);
+        }, 120); // ici vitesse d ecriture Developpeur full stack
 
-        // Nettoyage de l'intervalle à la désinscription
         return () => clearInterval(typingInterval);
-    }, []); // Exécute l'effet une fois à l'initialisation
+    }, [fullText]);
+
+    // Effet d'apparition aléatoire pour chaque lettre de lastName
+    useEffect(() => {
+        const letterTimeouts: NodeJS.Timeout[] = [];
+        const indexes = Array.from({ length: lastName.length }, (_, i) => i);
+
+        while (indexes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * indexes.length);
+            const letterIndex = indexes.splice(randomIndex, 1)[0];
+
+            const timeout = setTimeout(() => {
+                setLetterVisibilityLastName((prev) => {
+                    const newVisibility = [...prev];
+                    newVisibility[letterIndex] = 1;
+                    return newVisibility;
+                });
+
+                if (indexes.length === 0) setIsFilled(true);
+            }, randomIndex * 250);
+
+            letterTimeouts.push(timeout);
+        }
+
+        return () => letterTimeouts.forEach((timeout) => clearTimeout(timeout));
+    }, [lastName]);
+
+    // Effet d'apparition aléatoire pour chaque lettre de firstName
+    useEffect(() => {
+        const letterTimeouts: NodeJS.Timeout[] = [];
+        const indexes = Array.from({ length: firstName.length }, (_, i) => i);
+
+        while (indexes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * indexes.length);
+            const letterIndex = indexes.splice(randomIndex, 1)[0];
+
+            const timeout = setTimeout(() => {
+                setLetterVisibilityFirstName((prev) => {
+                    const newVisibility = [...prev];
+                    newVisibility[letterIndex] = 1;
+                    return newVisibility;
+                });
+            }, randomIndex * 150);
+
+            letterTimeouts.push(timeout);
+        }
+
+        return () => letterTimeouts.forEach((timeout) => clearTimeout(timeout));
+    }, [firstName]);
 
     return (
         <div>
             <div className={`cardIdentityWrapper ${className}`}>
-                {/* pour rappel futur, chakra_petch est le nom de ma google font */}
-                <p className={`familyName ${audiowide.className}`}>Jean-Christophe</p>
-                <p className={`familyName2 ${audiowide.className}`}>Fontaine</p>
-                <p className={`myName ${audiowide.className}`}>
-                    {displayedText}
+                <p className={`familyName2 ${audiowide.className} ${isFilled ? "fillAnimation" : ""}`}>
+                    {firstName.split("").map((letter, index) => (
+                        <span
+                            key={index}
+                            style={{
+                                opacity: letterVisibilityFirstName[index],
+                                transition: "opacity 0.3s ease"
+                            }}
+                        >
+                            {letter}
+                        </span>
+                    ))}
                 </p>
+                <p className={`familyName2 ${audiowide.className} ${isFilled ? "fillAnimation" : ""}`}>
+                    {lastName.split("").map((letter, index) => (
+                        <span
+                            key={index}
+                            style={{
+                                opacity: letterVisibilityLastName[index],
+                                transition: "opacity 0.3s ease"
+                            }}
+                        >
+                            {letter}
+                        </span>
+                    ))}
+                </p>
+                <p className={`myName ${audiowide.className}`}>{displayedText}</p>
             </div>
         </div>
     );
