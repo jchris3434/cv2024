@@ -9,12 +9,15 @@
     background-position: center;
 }
 
-.toto {
-    width: 90%;
+.main-text-education {
+    max-width: 800px; /* Définit une largeur maximale pour recentrer le contenu */
+    width: 100%;
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    padding: 1rem;
 }
 
 .logo-school-container {
-    padding-top: 3rem;
+    padding-top: 5rem;
     padding-left: 3rem;
     width: 17%;
 }
@@ -25,7 +28,7 @@
 }
 
 .cda, .cursus-title {
-    padding-left: 25rem;
+    padding: 0;
     text-align: left;
 }
 
@@ -37,19 +40,18 @@
 
 .dwwm {
     padding-top: 4rem;
-    padding-right: 25rem;
     text-align: right;    
 }
 
 .cda-title {
     display: flex;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .dwwm-title {
     display: flex;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     justify-content: flex-end;
 }
 
@@ -75,21 +77,39 @@
 @media (max-width: 1024px) {
     
     .logo-school-container {
-        display: flex;           
-        justify-content: center;  
-        align-items: center;      
-        padding-top: 1rem;
+        padding-top: 2rem;
+        width: 50%
     }
     
-
-    .cda, .cursus-title {
-        padding-left: 0rem;
-        text-align: unset;
+    .main-text-education {
+        padding-top: 2rem;
     }
 
-    .dwwm {
-        padding-top: 4rem;
-        padding-right: 0rem;
-        text-align: unset;    
+    .cursus-title {
+        padding-bottom: 2rem;
+        padding-left: 0.5rem;
+    }
+
+    .devopsOption, .cda-flex {
+        display: flex;
+    }
+
+    .cda-flex {
+        font-size: 2rem;
+    }
+
+    .devopsOption {
+        font-size: 1.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .more-details {
+        font-size: 1.2rem;
+        padding-left: 0.5rem;
+    }
+    
+    .rncp {
+        padding: .5rem .5rem 0 .5rem;
+        font-size: 1.4rem;
     }
 }

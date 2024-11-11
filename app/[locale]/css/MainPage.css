@@ -3,19 +3,6 @@
     justify-content: center;
     gap: 3rem;
     align-items: center;
-    /* background: linear-gradient(90deg, rgba(246, 216, 9, 0.8) 11%, rgba(248, 40, 250, 0.8) 51%, rgba(252, 139, 0, 0.8) 88%); */
-
-    /* option B */
-    /* background: #ddd6f3;  
-    background: -webkit-linear-gradient(to right, #faaca8, #ddd6f3);  
-    background: linear-gradient(to right, #faaca8, #ddd6f3);  */
-
-    /* option C */
-    /* background: #9796f0; 
-    background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);  
-    background: linear-gradient(to right, #fbc7d4, #9796f0); */
-
-    /* option D */
     background-image: linear-gradient(120deg, #b0fade 10%, #70cfff 80%);
 }
 

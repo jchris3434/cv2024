@@ -30,17 +30,19 @@ function AboutMe({ isMobile }: AboutMeProps): JSX.Element {
             </div>
 
 
-            <p>
-              Après plus de 10 ans passé dans l'hôtellerie de luxe à l'étranger – avec des expériences en Angleterre, aux États-Unis, et en Suisse – où j'ai évolué dans des établissements haut de gamme exigeant rigueur, sérieux, et satisfaction client.
-            </p>
+            <div className='about-me-text'>
+              <p>
+                Après plus de 10 ans passé dans l'hôtellerie de luxe à l'étranger – avec des expériences en Angleterre, aux États-Unis, et en Suisse – où j'ai évolué dans des établissements haut de gamme exigeant rigueur, sérieux, et satisfaction client.
+              </p>
 
-            <p>
-              De retour à Montpellier après une décennie à l'étranger, et inspiré par les grandes réflexions post-Covid, j'ai entrepris une reconversion professionnelle en 2022 pour suivre ma première passion : l'informatique. J'ai donc repris mes études et obtenu un premier diplôme de Développeur Web & Web Mobile, suivi d'un diplôme de Concepteur Développeur d'Applications (option DevOps) à l'école Beweb de Montpellier.
-            </p>
+              <p>
+                De retour à Montpellier après une décennie à l'étranger, et inspiré par les grandes réflexions post-Covid, j'ai entrepris une reconversion professionnelle en 2022 pour suivre ma première passion : l'informatique. J'ai donc repris mes études et obtenu un premier diplôme de Développeur Web & Web Mobile, suivi d'un diplôme de Concepteur Développeur d'Applications (option DevOps) à l'école Beweb de Montpellier.
+              </p>
 
-            <p>
-              Je serais ravi de collaborer avec vous sur tout type de projet!
-            </p>
+              <p>
+                Je serais ravi de collaborer avec vous sur tout type de projet!
+              </p>
+            </div>
           </div>
         </div>
       </div>
