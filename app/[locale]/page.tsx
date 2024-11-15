@@ -10,7 +10,7 @@ import AboutMe from "./components/AboutMe";
 import "./css/MainPage.css";
 import Education from './components/Education';
 import Resume from './components/Resume';
-// import Contact from './components/Contact';
+import Contact from './components/Contact';
 
 export default function Home() {
     const [isMobile, setIsMobile] = useState(false);
@@ -40,9 +40,9 @@ export default function Home() {
             <section id="education">
                 <Education isMobile={isMobile}/>
             </section>
-            {/* <section id="resume">
+            <section id="resume">
                 <Resume isMobile={isMobile}/>
-            </section> */}
+            </section>
             {/* <section id="contact">
                 <Contact isMobile={isMobile}/>
             </section> */}

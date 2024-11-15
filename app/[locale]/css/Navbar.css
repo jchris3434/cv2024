@@ -4,6 +4,7 @@
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 0.4rem 2rem;
+    z-index: 1;
 }
 
 .nav-container {
@@ -44,11 +45,11 @@
 
 .nav-item:hover {
     padding-top: 1px;
-    color: #10b981;
+    color: #5ce1e6;
 }
 
 .nav-item.active {
-    border-color: #10b981;
+    border-color: #5ce1e6;
 }
 
 .frenchFlag {

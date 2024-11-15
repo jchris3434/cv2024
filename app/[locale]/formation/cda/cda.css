@@ -1,0 +1,76 @@
+.cda-page {
+    background-image: url("/school.png"); 
+    background-size: cover; 
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 60rem;
+    width: 100%;
+    padding-left: 8rem;
+    margin: auto;
+}
+
+.cursus-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.section {
+    padding: 1.5rem 0;
+    width: 100%;
+}
+
+.section-title {    
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-content {
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.devopsOption {
+    display: flex;
+    font-size: 2rem;
+}
+
+.cda-color, .devops {
+    color: #5ce1e6;
+}
+
+.devops {
+    padding-left: 5px;
+}
+
+.cda-title {
+    font-size: 2.2rem;
+}
+
+.diezPadding {
+    display: flex;
+    padding-right: 3px;
+}
+
+.button-cda {
+    padding-left: 2rem;
+    padding-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .content-container {
+        padding: 1.5rem 1rem 0;
+    }    
+}
