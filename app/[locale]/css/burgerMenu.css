@@ -1,3 +1,8 @@
+.burgerWrapper {
+    display: flex;
+    top: 1.25rem;
+}
+
 .headerBurger {
     position: fixed;
     top: 1.25rem;
@@ -54,3 +59,14 @@
     font-size: 1.5rem;
     color: white; 
 }
+
+@media (max-width: 1024px) {
+    .burgerNavFlag {
+        top: 1.25rem;
+        right: unset;
+        left: 1rem;
+    }
+}
+
+
+

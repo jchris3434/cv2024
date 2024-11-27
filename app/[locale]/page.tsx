@@ -11,6 +11,7 @@ import "./css/MainPage.css";
 import Education from './components/Education';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
+import Presentation from './components/Presentation';
 
 export default function Home() {
     const [isMobile, setIsMobile] = useState(false);
@@ -29,23 +30,26 @@ export default function Home() {
     return (
         <section>
             {!isMobile ? <Navbar /> : <BurgerMenu />}
-            <div className="presentationCard">
-                <PhotoCard2 />
-                <CardIdentity className="" />
-            </div>
+
+            <section id="presentation">
+                <Presentation isMobile={isMobile}/>
+            </section>
             
             <section id="about-me">
                 <AboutMe isMobile={isMobile}/>
             </section>
+
             <section id="education">
                 <Education isMobile={isMobile}/>
             </section>
+
             <section id="resume">
                 <Resume isMobile={isMobile}/>
             </section>
-            {/* <section id="contact">
+
+            <section id="contact">
                 <Contact isMobile={isMobile}/>
-            </section> */}
+            </section>
         </section>
     );
 }

@@ -16,7 +16,7 @@ function AboutMe({ isMobile }: AboutMeProps): JSX.Element {
         {!isMobile && (<div className='avatar-circle'>
           <Image
             className="avatar-circle"
-            src="/avatar-circle.png"
+            src="/photoAvatar.jpg"
             width={500}
             height={500}
             alt="Picture of the author"

@@ -1,10 +1,12 @@
 .header {
     position: sticky;
     top: 0;
-    background-color: white;
+    background-color: black;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 0.4rem 2rem;
     z-index: 1;
+    color: #E0E0E0   ;
+    
 }
 
 .nav-container {
@@ -26,6 +28,9 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    min-height: 4rem; 
+    font-family: 'Montserrat', Arial, sans-serif;
+    /* text-transform: uppercase; */
 }
 
 .navFlag {
@@ -41,15 +46,21 @@
     border-bottom: 2px solid transparent;
     transition: all 0.2s;
     cursor: pointer;
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out; 
+}
+
+.nav-item.visible {
+    opacity: 1; 
 }
 
 .nav-item:hover {
     padding-top: 1px;
-    color: #5ce1e6;
+    color: #1da9cc;
 }
 
 .nav-item.active {
-    border-color: #5ce1e6;
+    border-color: #1da9cc;
 }
 
 .frenchFlag {

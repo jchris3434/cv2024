@@ -3,6 +3,7 @@ import { hind } from "../fonts/fonts";
 import { roboto_condensed } from "../fonts/fonts";
 import "../css/Resume.css";
 import Image from 'next/image';
+import ButtonCvDownload from './ButtonCvDownload';
 
 interface ResumeProps {
   isMobile: boolean;
@@ -10,25 +11,15 @@ interface ResumeProps {
 
 function Resume({ isMobile }: ResumeProps): JSX.Element {
 
-  const myResume = (url: string, filename: string) => {
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <section className={`resume-section ${hind.className}`}>
       <div className='resume-title-wrapper'>
         <h3 className={`resume-title ${roboto_condensed.className}`}>COMPETENCES PROFESSIONELLES</h3>
-        <button
-          onClick={() => myResume("/CV2024FR.pdf", "CV2024FR.pdf")}
-          className='button-cv'
-        >
-          Télécharger mon CV
-        </button>
+        <ButtonCvDownload
+          url="/CV2024FR.pdf"
+          filename="CV2024FR.pdf"
+          className="button-cv"
+        />
 
       </div>
 
@@ -38,7 +29,7 @@ function Resume({ isMobile }: ResumeProps): JSX.Element {
             <h1 className='skills-titles'>Hard Skills</h1>
             <Image
               className="hard-skills-icones"
-              src="/hard-skills.png"
+              src="/hard-skills-dark.png"
               width={500}
               height={500}
               alt="hard-skills-icones"
@@ -46,7 +37,7 @@ function Resume({ isMobile }: ResumeProps): JSX.Element {
           </div>
 
           <div>
-            <h1 className='skills-titles'>Soft Skills</h1>
+            <h1 className='soft-skills-title'>Soft Skills</h1>
 
             <div className='soft-skills'>
               <div className='languages'>

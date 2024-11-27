@@ -4,7 +4,7 @@
     height: 100vh;
     margin: 0 auto;
     line-height: 1.6;
-    background-image: url("/school.png"); 
+    background-image: url("/schoolDark.png"); 
     background-size: cover; 
     background-position: center;
 }
@@ -14,6 +14,7 @@
     width: 100%;
     margin: 0 auto; /* Centre le conteneur horizontalement */
     padding: 1rem;
+    color: #E0E0E0;
 }
 
 .logo-school-container {
@@ -65,7 +66,7 @@
 
 .cda-entity, .dwwm-entity {
     font-weight: 600;
-    color: #5ce1e6;
+    color: #1da9cc;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
@@ -77,7 +78,7 @@
 @media (max-width: 1024px) {
     
     .logo-school-container {
-        padding-top: 2rem;
+        padding-top: 3rem;
         width: 50%
     }
     
@@ -111,5 +112,12 @@
     .rncp {
         padding: .5rem .5rem 0 .5rem;
         font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1024px) {
+    .logo-school-container {
+        padding-top: 2rem;
+        width: 30%;
     }
 }

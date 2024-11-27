@@ -18,7 +18,7 @@ function Education({ isMobile }: EducationProps): JSX.Element {
     <section id="education" className={`education-container ${hind.className}`}>
       <div className='logo-school-container'>
         <Image
-          src="/beweb2.png"
+          src="/bewebLogoDark.png"
           width={500}
           height={500}
           alt="School Logo"

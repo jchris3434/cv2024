@@ -4,12 +4,16 @@ import { useChangeLocale, useCurrentLocale } from "../../../locales/client"
 import "../css/Navbar.css";
 import Image from 'next/image';
 
-export const LocaleSelect = () => {
+interface LocaleSelectProps {
+    className?: string;
+}
+
+export const LocaleSelect = ({ className }: LocaleSelectProps)  => {
     const locale = useCurrentLocale();
     const changeLocale = useChangeLocale();
 
     return (
-        <nav className="navFlag">
+        <nav className="navFlag burgerNavFlag">
             <button 
                 onClick={() => changeLocale("en")}
             >

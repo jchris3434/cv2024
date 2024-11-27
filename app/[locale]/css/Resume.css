@@ -1,8 +1,10 @@
 .resume-section {
     width: 100%; 
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0 auto;
     line-height: 1.6;
+    background-color: black;
+    color: #E0E0E0;
 }
 
 .resume-container {
@@ -38,7 +40,7 @@
 
 .button-cv {    
     margin-right: 2rem;
-    background-color: #5ce1e6;
+    background-color: #1da9cc;
     color: #fff;
     padding: 0.5rem 1rem;
     font-size: 1.1rem;
@@ -55,12 +57,15 @@
     margin: auto;
 }
 
-.skills-titles, .experience-main-title {
+.skills-titles, .soft-skills-title, .experience-main-title {
     font-size: 2rem;
     font-weight: 600;
-    text-align: center;
+    text-align: center;    
+    color: #1da9cc;
+}
+
+.skills-titles {
     padding-top: 2rem;
-    color: #5ce1e6;
 }
 
 .languages {
@@ -110,6 +115,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: black;
+    color: #E0E0E0;
 }
 
 .soft-skills {
@@ -118,5 +125,63 @@
     justify-content: center;
 }
 
+@media (max-width: 1800px) {
+    .hard-skills-icones {
+        width: 70%;
+    }
+}
 
+@media (max-width: 1024px) {
+    .resume-title-wrapper {
+        display: block;
+    }
+
+    .resume-title {
+        padding-top: 5rem;
+    }
+
+    .button-cv {
+        margin-top: 1rem;
+        margin-right: unset;
+    }
+    
+    .resume-container {
+        display: block;
+    }
+    
+    .all-skills {
+        width: 100vw;
+    }
+
+    .hard-skills-icones {
+        width: 95%;
+    }
+
+    .soft-skills {
+        display: block;
+    }
+
+    .languages {
+        padding-top: 0.5rem;
+        padding-left: 2rem;
+    }
+
+    .interpersonal-skills {
+        padding-left: 2rem;
+    }
+
+    .experience-container {
+        padding-top: 2rem;
+    }
+
+    .experience-container, .experience-main-title {
+        width: 100vw;
+    }
+
+    .experience-wrapper {
+        width: 90vw;
+    }
+
+
+}
 
