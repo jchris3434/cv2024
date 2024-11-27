@@ -2,12 +2,14 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
+import { useI18n } from "@/locales/client";
 import "../cda/cda.css";
 import { hind } from "../../fonts/fonts";
 import { roboto_condensed } from '../../fonts/fonts';
 
 function Dwwm() {
   const router = useRouter();
+  const t = useI18n();  // Hook pour accéder aux traductions
 
   const handleBackClick = () => {
     router.back();
@@ -15,35 +17,34 @@ function Dwwm() {
 
   return (
     <section className={`cda-page ${roboto_condensed.className}`}>
-      <button className='button-cda' onClick={handleBackClick}>Précédent</button>
+      <button className='button-cda' onClick={handleBackClick}>{t("dwwm.previous")}</button>
       <div className="content-container">
 
         <div className='cda-cursus-title section-title'>
-          <p className='cda-color cda-title'>Développeur Web & Web Mobile</p>
+          <p className='cda-color cda-title'>{t("dwwm.title")}</p>
         </div>
 
         <div className='cursus-container'>
           <div className="section">
             <div className="section-title diezPadding">
-              <span className='cda-color diezPadding'>#01</span> | Développer la partie front-end d’une application sécurisée
+              <span className='cda-color diezPadding'>#01</span> | {t("dwwm.section1_title")}
             </div>
-            <p className="section-content">Ecosystème et culture numérique</p>
-            <p className="section-content">Gérer un projet Web</p>
-            <p className="section-content">Installer et configurer son environnement de travail en fonction du projet</p>
-            <p className="section-content">Maquetter des interfaces utilisateur web ou web mobile</p>
-            <p className="section-content">Maîtriser les langages de programmation : HTML, CSS, JavaScript et le Framework, ReactJS</p>
-
+            <p className="section-content">{t("dwwm.section1_content1")}</p>
+            <p className="section-content">{t("dwwm.section1_content2")}</p>
+            <p className="section-content">{t("dwwm.section1_content3")}</p>
+            <p className="section-content">{t("dwwm.section1_content4")}</p>
+            <p className="section-content">{t("dwwm.section1_content5")}</p>
           </div>
 
           <div className="section">
             <div className="section-title diezPadding">
-              <span className='cda-color diezPadding'>#02</span> | Développer la partie back-end d’une application
+              <span className='cda-color diezPadding'>#02</span> | {t("dwwm.section2_title")}
             </div>
-            <p className="section-content">Développer et implémenter des algorithmes</p>
-            <p className="section-content">Concevoir et gérer une base de données</p>
-            <p className="section-content">Maîtriser les langages de programmation : PHP, SQL, NoSQL et les Framework Symfony, Node.js</p>
-            <p className="section-content">Développer une application mobile IONIC</p>
-            <p className="section-content">Documenter le déploiement d’une application</p>
+            <p className="section-content">{t("dwwm.section2_content1")}</p>
+            <p className="section-content">{t("dwwm.section2_content2")}</p>
+            <p className="section-content">{t("dwwm.section2_content3")}</p>
+            <p className="section-content">{t("dwwm.section2_content4")}</p>
+            <p className="section-content">{t("dwwm.section2_content5")}</p>
           </div>
         </div>
       </div>

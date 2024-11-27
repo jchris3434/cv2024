@@ -2,12 +2,14 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
+import { useI18n } from "@/locales/client";
 import "./cda.css";
 import { hind } from "../../fonts/fonts";
 import { roboto_condensed } from '../../fonts/fonts';
 
 function Cda() {
   const router = useRouter();
+  const t = useI18n();  // Hook pour accéder aux traductions
 
   const handleBackClick = () => {
     router.back();
@@ -15,44 +17,44 @@ function Cda() {
 
   return (
     <section className={`cda-page ${roboto_condensed.className}`}>
-      <button className='button-cda' onClick={handleBackClick}>Précédent</button>
+      <button className='button-cda' onClick={handleBackClick}>{t("cda.previous")}</button>
       <div className="content-container">
         
         <div className='cda-cursus-title section-title'>
-          <p className='cda-color cda-title'>Concepteur Développeur d'Applications</p>
+          <p className='cda-color cda-title'>{t("cda.title")}</p>
           <div className='devopsOption'>
-            <span>option</span><span className='devops'>DevOps</span>
+            <span>{t("cda.option")}</span><span className='devops'>{t("cda.devops")}</span>
           </div>
         </div>
         
         <div className='cursus-container'>           
           <div className="section">
             <div className="section-title diezPadding">
-              <span className='cda-color diezPadding'>#01</span> | Développer une application sécurisée
+              <span className='cda-color diezPadding'>#01</span> | {t("cda.section1_title")}
             </div>
-            <p className="section-content">Installer et configurer son environnement de travail en fonction du projet</p>
-            <p className="section-content">Développer des interfaces utilisateurs</p>
-            <p className="section-content">Développer des composants métiers</p>
-            <p className="section-content">Contribuer à la gestion d’un projet informatique</p>
+            <p className="section-content">{t("cda.section1_content1")}</p>
+            <p className="section-content">{t("cda.section1_content2")}</p>
+            <p className="section-content">{t("cda.section1_content3")}</p>
+            <p className="section-content">{t("cda.section1_content4")}</p>
           </div>
           
           <div className="section">
             <div className="section-title diezPadding">
-              <span className='cda-color diezPadding'>#02</span> | Concevoir et développer une application sécurisée organisée en couches
+              <span className='cda-color diezPadding'>#02</span> | {t("cda.section2_title")}
             </div>
-            <p className="section-content">Analyser les besoins et maquetter une application</p>
-            <p className="section-content">Définir l’architecture logicielle d’une application</p>
-            <p className="section-content">Concevoir et mettre en place une base de données relationnelle</p>
-            <p className="section-content">Développer des composants d’accès aux données SQL et NoSQL</p>
+            <p className="section-content">{t("cda.section2_content1")}</p>
+            <p className="section-content">{t("cda.section2_content2")}</p>
+            <p className="section-content">{t("cda.section2_content3")}</p>
+            <p className="section-content">{t("cda.section2_content4")}</p>
           </div>
           
           <div className="section">
             <div className="section-title diezPadding">
-              <span className='cda-color diezPadding'>#03</span> | Préparer le déploiement d’une application sécurisée
+              <span className='cda-color diezPadding'>#03</span> | {t("cda.section3_title")}
             </div>
-            <p className="section-content">Préparer et exécuter les plans de tests d’une application</p>
-            <p className="section-content">Préparer et documenter le déploiement d’une application</p>
-            <p className="section-content">Contribuer à la mise en production dans une démarche DevOps</p>
+            <p className="section-content">{t("cda.section3_content1")}</p>
+            <p className="section-content">{t("cda.section3_content2")}</p>
+            <p className="section-content">{t("cda.section3_content3")}</p>
           </div>
         </div>
       </div>

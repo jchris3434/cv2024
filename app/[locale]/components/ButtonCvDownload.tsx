@@ -1,4 +1,5 @@
 import React from 'react';
+import { useI18n } from "@/locales/client";
 
 interface ButtonCvDownloadProps {
   url: string;
@@ -7,6 +8,8 @@ interface ButtonCvDownloadProps {
 }
 
 const ButtonCvDownload: React.FC<ButtonCvDownloadProps> = ({ url, filename, className }) => {
+  const t = useI18n();
+
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = url;
@@ -18,7 +21,7 @@ const ButtonCvDownload: React.FC<ButtonCvDownloadProps> = ({ url, filename, clas
 
   return (
     <button onClick={handleDownload} className={className || 'button-cv'}>
-      Télécharger mon CV
+      {t('buttonCV.downloadResume')} 
     </button>
   );
 };

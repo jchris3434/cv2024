@@ -4,14 +4,14 @@ import "../css/Education.css";
 import Image from 'next/image';
 import { hind } from "../fonts/fonts";
 import { roboto_condensed } from "../fonts/fonts";
-import Link from 'next/link'
+import Link from 'next/link';
 
 interface EducationProps {
   isMobile: boolean;
 }
 
 function Education({ isMobile }: EducationProps): JSX.Element {
-
+  const t = useI18n();
   const locale = useCurrentLocale();
 
   return (
@@ -21,52 +21,52 @@ function Education({ isMobile }: EducationProps): JSX.Element {
           src="/bewebLogoDark.png"
           width={500}
           height={500}
-          alt="School Logo"
+          alt={t('education.schoolLogoAlt')}
         />
       </div>
       <div className='main-text-education'>
-        <h1 className={`cursus-title ${roboto_condensed.className}`}>Formation - Diplomes</h1>
+        <h1 className={`cursus-title ${roboto_condensed.className}`}>
+          {t('education.title')}
+        </h1>
         {!isMobile ? (
           <div className={`cda-title ${roboto_condensed.className}`}>
             <p>2023-2024</p>
-            <p className='cda-entity'>Concepteur Développeur d'Applications</p>
-            <p>- option</p>
-            <p className='cda-entity'>DevOps</p>
+            <p className='cda-entity'>{t('education.cda.title')}</p>
+            <p>- {t('education.cda.option')}</p>
+            <p className='cda-entity'>{t('education.cda.devops')}</p>
           </div>
         ) : (
           <div className='cda'>
             <div className={`cda-title ${roboto_condensed.className}`}>
               <div className='cda-flex'>
-                <p className='cda-entity'>Concepteur Développeur d'Applications</p>
+                <p className='cda-entity'>{t('education.cda.title')}</p>
               </div>
-
             </div>
             <div className='devopsOption'>
-              <p>option</p>
-              <p className='cda-entity'>DevOps</p>
+              <p>{t('education.cda.option')}</p>
+              <p className='cda-entity'>{t('education.cda.devops')}</p>
             </div>
-
           </div>
         )}
 
-        <p className='rncp'>RNCP niveau 6 - Bac +3/4 - Obtenu</p>
+        <p className='rncp'>{t('education.cda.rncp')}</p>
         <Link className='more-details' href={`/formation/cda`}>
-          + de détails
+          {t('education.moreDetails')}
         </Link>
 
         <div className='dwwm'>
           <div className={`dwwm-title ${roboto_condensed.className}`}>
             {!isMobile && <p className="dwwm-year">2022-2023</p>}
-            <p className='dwwm-entity'>Développeur Web & Web Mobile</p>
+            <p className='dwwm-entity'>{t('education.dwwm.title')}</p>
           </div>
-          <p className='rncp'>RNCP niveau 5 - Bac +2 - Obtenu</p>
+          <p className='rncp'>{t('education.dwwm.rncp')}</p>
           <Link className='more-details' href={`/${locale}/formation/dwwm`}>
-            + de détails
+            {t('education.moreDetails')}
           </Link>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Education
+export default Education;

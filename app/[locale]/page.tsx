@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import Image from "next/image";
-import PhotoCard2 from "./components/PhotoCard2";
-import CardIdentity from "./components/CardIdentity";
+// import PhotoCard2 from "./components/PhotoCard2";
+// import CardIdentity from "./components/CardIdentity";
 import Navbar from "./components/Navbar";
 import BurgerMenu from "./components/burgerMenu";
 import AboutMe from "./components/AboutMe";

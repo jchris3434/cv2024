@@ -10,6 +10,8 @@ interface AboutMeProps {
 }
 
 function AboutMe({ isMobile }: AboutMeProps): JSX.Element {
+  const t = useI18n();
+
   return (
     <section id="about-me" className={`about-me ${hind.className}`}>
       <div className='avatarWrapper'>
@@ -19,29 +21,20 @@ function AboutMe({ isMobile }: AboutMeProps): JSX.Element {
             src="/photoAvatar.jpg"
             width={500}
             height={500}
-            alt="Picture of the author"
+            alt={t('aboutMe.avatarAlt')} 
           />
         </div>)}
         <div className='all-text-wrapper'>
           <div>
-            <h1 className={`About-Title ${roboto_condensed.className}`}>QUI SUIS-JE?</h1>
+            <h1 className={`About-Title ${roboto_condensed.className}`}>{t('aboutMe.title')}</h1>
             <div className='my-name-wrapper'>
-              <span>Moi, c'est <span className='my-name-color'>Jean-Christophe</span></span>
+              <span>{t('aboutMe.introduction')} <span className='my-name-color'>Jean-Christophe</span></span>
             </div>
 
-
             <div className='about-me-text'>
-              <p>
-                Après plus de 10 ans passé dans l'hôtellerie de luxe à l'étranger – avec des expériences en Angleterre, aux États-Unis, et en Suisse – où j'ai évolué dans des établissements haut de gamme exigeant rigueur, sérieux, et satisfaction client.
-              </p>
-
-              <p>
-                De retour à Montpellier après une décennie à l'étranger, et inspiré par les grandes réflexions post-Covid, j'ai entrepris une reconversion professionnelle en 2022 pour suivre ma première passion : l'informatique. J'ai donc repris mes études et obtenu un premier diplôme de Développeur Web & Web Mobile, suivi d'un diplôme de Concepteur Développeur d'Applications (option DevOps) à l'école Beweb de Montpellier.
-              </p>
-
-              <p>
-                Je serais ravi de collaborer avec vous sur tout type de projet!
-              </p>
+              <p>{t('aboutMe.experience')}</p>
+              <p>{t('aboutMe.reconversion')}</p>
+              <p>{t('aboutMe.collaboration')}</p>
             </div>
           </div>
         </div>
