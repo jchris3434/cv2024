@@ -8,7 +8,7 @@ import { Link } from "react-scroll";
 import { useEffect, useState } from "react";
 
 interface NavbarProps {
-    className?: string;
+    readonly className?: string;
 }
 
 // Mapper les sections avec les clés exactes de traduction

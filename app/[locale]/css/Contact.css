@@ -26,7 +26,6 @@ section {
 
 .contact-title {
     text-align: center;
-    /* padding-top: 6rem; */
     font-size: 2rem;
     font-weight: 600;    
 }
@@ -38,13 +37,9 @@ section {
     line-height: 80%;
     transform: rotateX(0) rotateY(-25deg);
     text-transform: uppercase;
-    /* width: 30rem; */
     text-align: center;
     color: #E0E0E0;
     font-family: 'Abril Fatface', sans-serif;
-    /* margin: 0 auto;
-    position: relative;
-    padding: 2rem 0 9rem; */
     padding-top: 8rem;
     text-shadow: 0 0 5px #E0E0E0, 0 0 10px #E0E0E0, 0 0 15px #E0E0E0, 0 0 20px #1da9cc, 0 0 35px #1da9cc, 0 0 40px #1da9cc;
   }
@@ -68,7 +63,6 @@ section {
     text-align: center;
     width: 28rem;
     position: absolute;
-    /* bottom: 8rem; */
     padding-top: 5rem;
     left: calc(50% - 225px);
     margin: 0 auto;
@@ -222,7 +216,6 @@ section {
 /* Profile Picture */
 .profile-card img {
   display: block;
-  margin: 0 auto;
   width: 100px;
   height: 100px;
   object-fit: cover;
@@ -233,7 +226,6 @@ section {
                     linear-gradient(to right, #1da9cc, white);
   background-origin: border-box;
   background-clip: content-box, border-box;
-  /* border: 2px solid #1999; */
   position: relative;
 }
 
@@ -259,7 +251,6 @@ section {
   width: 90%;
   justify-content: space-evenly;
   font-size: 1.4rem;
-  /* margin: 5px 0; */
 }
 
 .profile-card .icons img {
@@ -295,7 +286,6 @@ section {
   color: #FFFFFF;
   padding: 8px 20px;
   margin-top: 1rem;
-  background: #1da9cc;
   border-radius: 50px;
   background: linear-gradient(to right, #E0E0E0  0%, #1da9cc 100%);
 }

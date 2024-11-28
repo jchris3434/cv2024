@@ -2,9 +2,9 @@ import React from 'react';
 import { useI18n } from "@/locales/client";
 
 interface ButtonCvDownloadProps {
-  url: string;
-  filename: string;
-  className?: string;
+  readonly url: string;
+  readonly filename: string;
+  readonly className?: string;
 }
 
 const ButtonCvDownload: React.FC<ButtonCvDownloadProps> = ({ url, filename, className }) => {
@@ -20,7 +20,7 @@ const ButtonCvDownload: React.FC<ButtonCvDownloadProps> = ({ url, filename, clas
   };
 
   return (
-    <button onClick={handleDownload} className={className || 'button-cv'}>
+    <button onClick={handleDownload} className={className ?? 'button-cv'}>
       {t('buttonCV.downloadResume')} 
     </button>
   );

@@ -1,13 +1,12 @@
 import React from 'react';
-import { hind } from "../fonts/fonts";
-import { roboto_condensed } from "../fonts/fonts";
+import { hind, roboto_condensed } from "../fonts/fonts";
 import "../css/Resume.css";
 import Image from 'next/image';
 import ButtonCvDownload from './ButtonCvDownload';
 import { useI18n } from "@/locales/client";
 
 interface ResumeProps {
-  isMobile: boolean;
+  readonly isMobile: boolean;
 }
 
 function Resume({ isMobile }: ResumeProps): JSX.Element {

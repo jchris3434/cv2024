@@ -1,15 +1,14 @@
 "use client"
 
-import { useChangeLocale, useCurrentLocale } from "../../../locales/client"
+import { useChangeLocale } from "../../../locales/client"
 import "../css/Navbar.css";
 import Image from 'next/image';
 
 interface LocaleSelectProps {
-    className?: string;
+    readonly className?: string;
 }
 
 export const LocaleSelect = ({ className }: LocaleSelectProps)  => {
-    const locale = useCurrentLocale();
     const changeLocale = useChangeLocale();
 
     return (

@@ -3,7 +3,7 @@ import "../css/Presentation.css";
 import { useCurrentLocale } from "@/locales/client";
 
 interface PresentationProps {
-    isMobile: boolean;
+    readonly isMobile: boolean;
 }
 
 function Presentation({ isMobile }: PresentationProps): JSX.Element {

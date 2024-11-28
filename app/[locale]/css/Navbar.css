@@ -44,7 +44,6 @@
 .nav-item {
     padding: 1rem;
     border-bottom: 2px solid transparent;
-    transition: all 0.2s;
     cursor: pointer;
     opacity: 0; 
     transition: opacity 0.5s ease-in-out; 

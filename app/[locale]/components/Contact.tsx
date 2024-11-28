@@ -1,14 +1,13 @@
 import React from 'react';
 import "../css/Contact.css";
 import Image from 'next/image';
-import { hind } from "../fonts/fonts";
-import { roboto_condensed } from "../fonts/fonts";
+import { hind, roboto_condensed } from "../fonts/fonts";
 import ButtonCvDownload from './ButtonCvDownload';
 import Link from 'next/link';
 import { useI18n } from "@/locales/client";
 
 interface ContactProps {
-  isMobile: boolean;
+  readonly isMobile: boolean;
 }
 
 function Contact({ isMobile }: ContactProps): JSX.Element {

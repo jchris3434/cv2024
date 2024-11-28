@@ -9,7 +9,7 @@ import { roboto_condensed } from '../../fonts/fonts';
 
 function Dwwm() {
   const router = useRouter();
-  const t = useI18n();  // Hook pour accéder aux traductions
+  const t = useI18n();
 
   const handleBackClick = () => {
     router.back();

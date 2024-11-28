@@ -2,12 +2,11 @@ import React from 'react';
 import { useI18n, useCurrentLocale } from "@/locales/client";
 import "../css/Education.css";
 import Image from 'next/image';
-import { hind } from "../fonts/fonts";
-import { roboto_condensed } from "../fonts/fonts";
+import { hind, roboto_condensed } from "../fonts/fonts";
 import Link from 'next/link';
 
 interface EducationProps {
-  isMobile: boolean;
+  readonly isMobile: boolean;
 }
 
 function Education({ isMobile }: EducationProps): JSX.Element {

@@ -2,11 +2,10 @@ import React from 'react';
 import "../css/AboutMe.css";
 import Image from 'next/image';
 import { useI18n } from "@/locales/client";
-import { hind } from "../fonts/fonts";
-import { roboto_condensed } from "../fonts/fonts";
+import { hind, roboto_condensed } from "../fonts/fonts";
 
 interface AboutMeProps {
-  isMobile: boolean;
+  readonly isMobile: boolean;
 }
 
 function AboutMe({ isMobile }: AboutMeProps): JSX.Element {
