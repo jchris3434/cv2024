@@ -1,7 +1,4 @@
-import { Chakra_Petch } from 'next/font/google';
-import { Hind } from 'next/font/google';
-import { Audiowide } from 'next/font/google';
-import { Roboto_Condensed } from 'next/font/google';
+import { Chakra_Petch, Hind, Audiowide, Roboto_Condensed } from 'next/font/google';
 
 export const chakra_petch = Chakra_Petch({
     weight: ['400'],

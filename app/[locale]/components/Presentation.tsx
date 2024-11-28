@@ -7,7 +7,6 @@ interface PresentationProps {
 }
 
 function Presentation({ isMobile }: PresentationProps): JSX.Element {
-
     const locale = useCurrentLocale();
     const fullText = locale === 'fr' ? "DDéveloppeur" : "DDeveloper";
     const lastName = "Fontaine";
@@ -76,49 +75,50 @@ function Presentation({ isMobile }: PresentationProps): JSX.Element {
             } else {
                 clearInterval(typingInterval);
             }
-        }, 120); // ici vitesse d ecriture Developpeur
+        }, 120);
 
         return () => clearInterval(typingInterval);
     }, [fullText]);
 
     return (
-        <section className={`presentation-container`}>
+        <section className="presentation-container">
             <div className="center-wrapper">
-        <div className="prenom">
-            <p className={`bibi ${isFilled ? "fillAnimation" : ""}`}>
-                {firstName.split("").map((letter, index) => (
-                    <span
-                        key={index}
-                        style={{
-                            opacity: letterVisibilityFirstName[index],
-                            transition: "opacity 0.3s ease",
-                        }}
-                    >
-                        {letter}
-                    </span>
-                ))}
-            </p>
-            <p className={`bibi love ${isFilled ? "fillAnimation" : ""}`}>
-                {lastName.split("").map((letter, index) => (
-                    <span
-                        key={index}
-                        style={{
-                            opacity: letterVisibilityLastName[index],
-                            transition: "opacity 0.3s ease",
-                        }}
-                    >
-                        {letter}
-                    </span>
-                ))}
-            </p>
-        </div>
-    </div>
-
-            <div className='fullStackContainer'>
-                <h1 className="fullStack-title" data-text="full stack"><span>full stack</span></h1>
+                <div className="prenom">
+                    <p className={`bibi ${isFilled ? "fillAnimation" : ""}`}>
+                        {firstName.split("").map((letter, index) => (
+                            <span
+                                key={`${letter}-${index}`} // Utilisation d'une clé unique
+                                style={{
+                                    opacity: letterVisibilityFirstName[index],
+                                    transition: "opacity 0.3s ease",
+                                }}
+                            >
+                                {letter}
+                            </span>
+                        ))}
+                    </p>
+                    <p className={`bibi love ${isFilled ? "fillAnimation" : ""}`}>
+                        {lastName.split("").map((letter, index) => (
+                            <span
+                                key={`${letter}-${index}`} // Même logique pour lastName
+                                style={{
+                                    opacity: letterVisibilityLastName[index],
+                                    transition: "opacity 0.3s ease",
+                                }}
+                            >
+                                {letter}
+                            </span>
+                        ))}
+                    </p>
+                </div>
             </div>
-            <div className='devText'>{displayedText}</div>
-            
+
+            <div className="fullStackContainer">
+                <h1 className="fullStack-title" data-text="full stack">
+                    <span>full stack</span>
+                </h1>
+            </div>
+            <div className="devText">{displayedText}</div>
         </section>
     );
 }

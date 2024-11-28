@@ -30,7 +30,7 @@ export default async function RootLayout({
     locale: string;
   };
 }>) {
-  const { locale } = await params;
+  const { locale } = params;
 
   return (
     <html lang={locale}>

@@ -4,7 +4,6 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import { useI18n } from "@/locales/client";
 import "../cda/cda.css";
-import { hind } from "../../fonts/fonts";
 import { roboto_condensed } from '../../fonts/fonts';
 
 function Dwwm() {

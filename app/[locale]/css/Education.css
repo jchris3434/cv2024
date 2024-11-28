@@ -1,12 +1,13 @@
 .education-container {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%; 
     height: 100vh;
     margin: 0 auto;
     line-height: 1.6;
     background-image: url("/schoolDark.png"); 
     background-size: cover; 
-    background-position: center;
+    background-position: center;    
 }
 
 .main-text-education {
@@ -21,11 +22,6 @@
     padding-top: 5rem;
     padding-left: 3rem;
     width: 17%;
-}
-
-.education-container {
-    display: flex;
-    flex-direction: column;
 }
 
 .cda, .cursus-title {
