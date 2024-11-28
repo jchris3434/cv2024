@@ -17,13 +17,20 @@ function Presentation({ isMobile }: PresentationProps): JSX.Element {
     const [letterVisibilityFirstName, setLetterVisibilityFirstName] = useState(Array(firstName.length).fill(0));
     const [isFilled, setIsFilled] = useState(false);
 
+    // Utilisation de crypto.getRandomValues() pour l'aléatoire côté client
+    function getSecureRandomIndex(max: number): number {
+        const array = new Uint32Array(1);
+        window.crypto.getRandomValues(array);
+        return array[0] % max;
+    }
+
     // Effet d'apparition aléatoire pour chaque lettre de lastName
     useEffect(() => {
         const letterTimeouts: NodeJS.Timeout[] = [];
         const indexes = Array.from({ length: lastName.length }, (_, i) => i);
 
         while (indexes.length > 0) {
-            const randomIndex = Math.floor(Math.random() * indexes.length);
+            const randomIndex = getSecureRandomIndex(indexes.length);
             const letterIndex = indexes.splice(randomIndex, 1)[0];
 
             const timeout = setTimeout(() => {
@@ -48,7 +55,7 @@ function Presentation({ isMobile }: PresentationProps): JSX.Element {
         const indexes = Array.from({ length: firstName.length }, (_, i) => i);
 
         while (indexes.length > 0) {
-            const randomIndex = Math.floor(Math.random() * indexes.length);
+            const randomIndex = getSecureRandomIndex(indexes.length);
             const letterIndex = indexes.splice(randomIndex, 1)[0];
 
             const timeout = setTimeout(() => {
