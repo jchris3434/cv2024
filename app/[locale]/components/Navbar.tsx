@@ -7,10 +7,6 @@ import { roboto_condensed } from "../fonts/fonts";
 import { Link } from "react-scroll";
 import { useEffect, useState } from "react";
 
-interface NavbarProps {
-    readonly className?: string;
-}
-
 // Mapper les sections avec les clés exactes de traduction
 const sectionKeys: { [key: string]: string } = {
     "about-me": "about",
@@ -19,7 +15,7 @@ const sectionKeys: { [key: string]: string } = {
     "contact": "contact",
 };
 
-export default function Navbar({ className }: NavbarProps) {
+export default function Navbar() {
     const t = useI18n();
 
     // État pour gérer la visibilité des items

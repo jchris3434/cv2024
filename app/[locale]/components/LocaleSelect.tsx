@@ -4,11 +4,7 @@ import { useChangeLocale } from "../../../locales/client"
 import "../css/Navbar.css";
 import Image from 'next/image';
 
-interface LocaleSelectProps {
-    readonly className?: string;
-}
-
-export const LocaleSelect = ({ className }: LocaleSelectProps)  => {
+export const LocaleSelect = ()  => {
     const changeLocale = useChangeLocale();
 
     return (

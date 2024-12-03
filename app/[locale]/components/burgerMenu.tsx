@@ -22,7 +22,10 @@ export default function BurgerMenu() {
 
     return (
         <div className="burgerWrapper">
-            <LocaleSelect className="local-select-burger" />
+            <div className="local-select-burger">
+                <LocaleSelect />
+            </div>
+
             <header className="headerBurger">
                 <button onClick={handleToggle} className="hamburger">
                     <span className={`line ${isOpen ? 'rotate-45 translate-y-1' : ''}`}></span>
@@ -32,7 +35,7 @@ export default function BurgerMenu() {
 
                 <nav className={`nav-burger ${isOpen ? 'open' : ''}`}>
                     <ul className="nav-list-burger">
-                        {Object.keys(sectionKeys).map((section, index) => (
+                        {Object.keys(sectionKeys).map((section) => (
                             <li key={section} className="nav-item-burger">
                                 <Link
                                     to={section}

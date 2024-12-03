@@ -158,7 +158,7 @@
     display: block; 
     justify-content: center;
     padding-left: 10rem;
-    padding-top: 3rem;
+    padding-top: 1rem;
 }
 
 
@@ -185,5 +185,11 @@
 
     .fullStack-title {
         font-size: calc(30px + 3vw);
+    }
+}
+
+@media (min-width: 1768px) {
+    .center-wrapper {
+        padding-top: 3rem;
     }
 }

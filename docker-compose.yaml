@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  app:
+    image: chris3434/cvnext2024:latest
+    container_name: cv-next-2024
+    ports:
+      - "3000:3000"
+    restart: always
