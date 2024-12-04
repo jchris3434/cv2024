@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Installer les dépendances
-RUN npm install --legacy-peer-deps
+RUN npm install
 
 # Copier le reste de l'application
 COPY . .
@@ -26,7 +26,7 @@ WORKDIR /app
 COPY --from=builder /app ./
 
 # Installer uniquement les dépendances de production
-RUN npm install --production --legacy-peer-deps
+RUN npm install --production
 
 # Exposer le port 3000
 EXPOSE 3000
