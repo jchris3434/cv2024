@@ -21,6 +21,7 @@ export default {
     title: {
       part1: "CONTACT",
       part2: " ME",
+      part3: ""
     },
     mobileTitle: "Contact me",
     name: "Fontaine Jean-Christophe",
