@@ -20,7 +20,7 @@ export default {
   contact: {
     title: {
       part1: "CONTACT",
-      part2: " MOI",
+      part2: " ME",
     },
     mobileTitle: "Contactez-moi",
     name: "Fontaine Jean-Christophe",
