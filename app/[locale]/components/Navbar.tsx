@@ -12,6 +12,7 @@ const sectionKeys: { [key: string]: string } = {
     "about-me": "about",
     "education": "education",
     "resume": "resume",
+    "projects": "projects",
     "contact": "contact",
 };
 
@@ -42,7 +43,7 @@ export default function Navbar() {
                                 }`}
                             >
                                 <Link activeClass="active" smooth spy to={section} className="nav-link">
-                                {t(`navbar.${sectionKeys[section]}` as "navbar.about" | "navbar.education" | "navbar.resume" | "navbar.contact")}
+                                {t(`navbar.${sectionKeys[section]}` as "navbar.about" | "navbar.education" | "navbar.resume" | "navbar.projects" | "navbar.contact")}
 
                                 </Link>
                             </li>

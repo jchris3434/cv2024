@@ -4,6 +4,7 @@ export default {
     "about": "About",
     "education": "Education",
     "resume": "Resume",
+    "projects": "Projects",
     "contact": "Contact"
   },
   aboutMe: {

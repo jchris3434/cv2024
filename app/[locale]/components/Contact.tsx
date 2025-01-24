@@ -11,7 +11,7 @@ interface ContactProps {
 }
 
 function Contact({ isMobile }: ContactProps): JSX.Element {
-  const t = useI18n(); // Importation de la fonction de traduction
+  const t = useI18n();
 
   return (
     <section className={`contact-me ${hind.className}`}>
