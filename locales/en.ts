@@ -118,6 +118,23 @@ export default {
     "section2_content3": "Master programming languages: PHP, SQL, NoSQL, and the Symfony, Node.js Frameworks",
     "section2_content4": "Develop an IONIC mobile application",
     "section2_content5": "Document the deployment of an application"
+  },
+  projects: {
+    "title1": "Exaprint",
+    "description1": "Example of a complete redesign of a product page after ContentSquare analyses and A/B tests",
+    "title2": "Resto Chez Olive",
+    "description2": "Development of a WordPress site for a restaurant with a reservation plugin",
+    "title3": "Landify",
+    "description3": "Creation of a responsive landing page",
+    "title4": "Custom CMS",
+    "description4": "Development of a CMS to easily create static websites using component blocks",
+    "title5": "Portfolio",
+    "description5": "Creation of my portfolio in Next.js with animations",
+    "title6": "WooCommerce Store",
+    "description6": "Development of an e-commerce site and store",
+    "title7": "Management Software",
+    "description7": "Creation of management software for clients and quote generation",
+    "mainTitle": "PROJECTS"
   }
   
   

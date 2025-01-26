@@ -17,6 +17,7 @@ export default function BurgerMenu() {
         "about-me": "about",
         "education": "education",
         "resume": "resume",
+        "projects": "projects",
         "contact": "contact",
     };
 
@@ -44,7 +45,7 @@ export default function BurgerMenu() {
                                     onClick={handleToggle}
                                     className="nav-link-burger"
                                 >
-                                    {t(`navbar.${sectionKeys[section]}` as "navbar.about" | "navbar.education" | "navbar.resume" | "navbar.contact")}
+                                    {t(`navbar.${sectionKeys[section]}` as "navbar.about" | "navbar.education" | "navbar.resume" | "navbar.projects" | "navbar.contact")}
                                 </Link>
                             </li>
                         ))}

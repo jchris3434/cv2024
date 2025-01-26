@@ -118,6 +118,23 @@ export default {
     "section2_content3": "Maîtriser les langages de programmation : PHP, SQL, NoSQL et les Framework Symfony, Node.js",
     "section2_content4": "Développer une application mobile IONIC",
     "section2_content5": "Documenter le déploiement d’une application"
+  },
+  projects: {
+    "title1": "Exaprint",
+    "description1": "Exemple de refonte complète d'une page produit après analyses ContentSquare et AB tests",
+    "title2": "Resto Chez Olive",
+    "description2": "Développement d'un site WordPress pour un restaurant avec plugin de réservations",
+    "title3": "Landify",
+    "description3": "Création d'une landing page responsive",
+    "title4": "CMS Maison",
+    "description4": "Développement d'un CMS afin de créer un site statique facilement via des blocs de composants",
+    "title5": "Portfolio",
+    "description5": "Création de mon portfolio en Next.js avec des animations",
+    "title6": "Boutique WooCommerce",
+    "description6": "Développement d'un site et boutique e-commerce",
+    "title7": "Logiciel de gestion",
+    "description7": "Création d'un logiciel de gestion de clients et création de devis",
+    "mainTitle": "PROJETS"
   }
   
   
