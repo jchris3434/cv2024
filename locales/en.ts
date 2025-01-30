@@ -130,7 +130,7 @@ export default {
     "description4": "Development of a CMS to easily create static websites using component blocks",
     "title5": "Portfolio",
     "description5": "Creation of my portfolio in Next.js with animations",
-    "title6": "WooCommerce Store",
+    "title6": "WooCommerce",
     "description6": "Development of an e-commerce site and store",
     "title7": "Management Software",
     "description7": "Creation of management software for clients and quote generation",

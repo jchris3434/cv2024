@@ -178,12 +178,11 @@
     .experience-wrapper {
         width: 90vw;
     }
-
 }
 
 @media (max-width: 768px) {
-    #resume {
-        margin-bottom: 47rem;
+    .resume-section {
+        height: auto;
     }
 }
 
